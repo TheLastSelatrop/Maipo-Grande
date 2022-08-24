@@ -74,8 +74,9 @@ div.col {
 }
 
 #backHome{
+    -webkit-app-region: drag;
     position: absolute;
-    right: 0px;
+    left: 10px;
     top: -5px;
 
 }
@@ -87,3 +88,7 @@ div.col {
     width: 280px;
     height: 65px;
 }
+
+button {
+    -webkit-app-region: no-drag;
+  }

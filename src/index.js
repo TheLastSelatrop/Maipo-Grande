@@ -16,6 +16,11 @@ let mainWindow
 
 app.on('ready', () => {
     mainWindow = new BrowserWindow({
+        titleBarStyle: 'hidden',
+        titleBarOverlay: {
+          color: '#121929',
+          symbolColor: '#FFFFFF',
+        },
         minHeight: 700,
         minWidth: 1100
     }); 
