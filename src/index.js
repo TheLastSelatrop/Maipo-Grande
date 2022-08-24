@@ -15,15 +15,18 @@ if (process.env.NODE_ENV !== 'production'){
 let mainWindow
 
 app.on('ready', () => {
-    mainWindow = new BrowserWindow({}); 
+    mainWindow = new BrowserWindow({
+        minHeight: 700,
+        minWidth: 1100
+    }); 
     mainWindow.loadURL(url.format({
         protocol: 'file',
-        pathname: path.join(__dirname, 'views/index.html'),
+        pathname: path.join(__dirname, 'views/Login.html'),
         slashes: true
     }));
 
-    const mainMenu = Menu.buildFromTemplate(templateMenu);
-    Menu.setApplicationMenu(mainMenu);
+    //const mainMenu = Menu.buildFromTemplate(templateMenu);
+    //Menu.setApplicationMenu(mainMenu);
 });
 
 const templateMenu = [

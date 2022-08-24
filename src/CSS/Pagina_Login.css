@@ -66,28 +66,24 @@ div.col {
 .Gen0{
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
     width: 116px;
     height: 36x;
     font-size: 15px
 }
-.Gen1{
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
-    width: 116px;
-    height: 36px;
-    font-size: 15px
+
+#backHome{
+    position: absolute;
+    right: 0px;
+    top: -5px;
+
 }
-.Gen2{
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
-    width: 130px;
-    height: 50px;
-    font-size: 18px
-}
-.Gen3{
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-    width: 130px;
-    height: 50px;
-    font-size: 18px
+
+#HeadLoginCard{
+    position: absolute;
+    left: 1%;
+    top: -21%;
+    width: 280px;
+    height: 65px;
 }
