@@ -41,21 +41,16 @@ fetch(url)
         // Email
         const EmailCard = document.createElement('p');
         EmailCard.classList.add('card-text');
-        EmailCard.textContent = "<b>correo:</b> " + usuario.CORREO;
+        EmailCard.textContent = "correo: " + usuario.CORREO;
         // IDs
         const IDsCard = document.createElement('p');
         IDsCard.classList.add('card-text');
-        IDsCard.textContent = "<b>correo:</b> " + usuario.ID + ' | ' + usuario.ID_ROL ;
+        IDsCard.textContent = "ID: " + usuario.ID + ' | Rol ID: ' + usuario.ID_ROL ;
         // Ubicacion
         const GeoCard = document.createElement('p');
         GeoCard.classList.add('card-text');
-        GeoCard.textContent = "<b>correo:</b> " + usuario.PAIS + ', ' + usuario.CIUDAD + ', ' + usuario.DIRECCION;
+        GeoCard.textContent = "Direccion:  " + usuario.PAIS + ', ' + usuario.CIUDAD + ', ' + usuario.DIRECCION;
 
-        const miNodoBoton = document.createElement('button');
-        miNodoBoton.classList.add('btn', 'btn-primary');
-        miNodoBoton.textContent = '+';
-        miNodoBoton.setAttribute('marcador', info.id);
-        miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);*/
         // Insertamos
         BodyCard.appendChild(TitleCard);
         BodyCard.appendChild(SubTCard);
