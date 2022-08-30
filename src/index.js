@@ -18,8 +18,9 @@ app.on('ready', () => {
     mainWindow = new BrowserWindow({
         titleBarStyle: 'hidden',
         titleBarOverlay: {
-          color: '#121929',
-          symbolColor: '#FFFFFF',
+          color: '#050818',
+          symbolColor: '#FFFFFF',   
+          height: 45
         },
         minHeight: 700,
         minWidth: 1100
@@ -30,27 +31,8 @@ app.on('ready', () => {
         slashes: true
     }));
 
-    const mainMenu = Menu.buildFromTemplate(templateMenu);
-    Menu.setApplicationMenu(mainMenu);
+    
 });
-
-const templateMenu = [
-    {
-        label: 'File',
-        submenu: [{
-            label: 'New Window',
-            accelerator: 'Ctrl+N',
-            click() {
-                alert('NUEVA VENTANA')
-            }
-        }]
-    }
-];
-
-/*app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') app.quit()
-})
-*/
 
 
 
