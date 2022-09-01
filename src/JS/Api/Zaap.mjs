@@ -1,8 +1,7 @@
-import Axios from axios;
-import Axios from 'axios';
+import axios from 'axios';
 
 
-export const ZaapAxios = Axios.create({
+export const ZaapAxios = axios.create({
     baseURL: `http://168.138.133.24:4000/api`
 })
 

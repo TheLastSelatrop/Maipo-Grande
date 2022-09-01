@@ -11,8 +11,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "axios": "^1.0.0-alpha.1",
     "electron": "^20.1.0",
     "electron-reload": "^2.0.0-alpha.1"
+  },
+  "dependencies": {
+    "axios": "^0.26.1"
   }
 }

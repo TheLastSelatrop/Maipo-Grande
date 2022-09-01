@@ -1,5 +1,5 @@
 import axios from "axios";
-import ZaapAxios from "../zaap";
+import ZaapAxios from "./Api/Zaap.mjs";
 
 
 export const login = async(datos) =>{
