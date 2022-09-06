@@ -1,44 +1,70 @@
 import React, { Component, useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
+import { login } from "../helpers/getAdmin";
 
-import image2 from "../assets/FondoLogin.jpg";
+import FondoLog from "../assets/FondoLogin.jpg";
+
+
+
 
 const LoginPage = () => {
+    const [formValues, setFormValues] = useState({correo: '', password: ''})
+    const {correo, password} = formValues;
+
+    const navigate = useNavigate();
+
+    const onChange = ({target}) =>{
+        console.log(target.value);
+        
+        setFormValues({
+            ...formValues,
+            [target.name]: target.value
+        })
+    }
+
+
+    const onSubmit = async(e) =>{
+        e.preventDefault();
+       
+        const respuesta = await login(formValues);
+        if(respuesta.msg){
+            navigate('/')
+        }
+    }
     return ( 
     <div>
-        <div class="carrusel container-fluid">
-            <div id="carouselExampleFade" class="carousel slide mt-5 w-75" data-interval="5000" data-ride="carousel">
-                <div class="carousel-inner">
+        <div className="carrusel container-fluid">
+            <div id="carouselExampleFade" className="carousel slide mt-5 w-75" data-interval="5000" data-ride="carousel">
+                <div className="carousel-inner">
 
-                    <div class="carrusel carousel-item active">
-                    <img src={image2} class="wallpaper d-block w-100" alt="." id="imagen"/>
+                    <div className="carrusel carousel-item active">
+                    <img src={FondoLog} className="wallpaper d-block w-100" alt="." id="imagen"/>
                 </div>
 
                 </div>
             </div>
         </div>
         
-        <div class="login-form card" id="LoginCardBox">
+        <div className="login-form card" id="LoginCardBox">
             
-            <svg class="bd-placeholder-img" id="HeadLoginCard">
+            <svg className="bd-placeholder-img" id="HeadLoginCard">
                 <rect width="100%" height="100%" fill="#1e40ae"></rect>
                 <text x="14%" y="65%" fill="#dee2e6" id="HeadLoginInfo">Inicio Clientes</text>
             </svg>
-            <div class="card-body">
+            <div className="card-body">
                 <form>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label"></label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Correo Electronico">
-                        </input>
+                    <div className="mb-3">
+                        <label className="form-label"></label>
+                        <input type="text" className="form-control" onChange={onChange} value={correo} name="correo" placeholder="Correo Electronico"></input>
                     </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label"></label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Clave">
-                        </input>
+                    <div className="mb-3">
+                        <label className="form-label"></label>
+                        <input type="password" className="form-control" onChange={onChange} value={password} name="password" placeholder="Clave"></input>
                     </div>
 
-                    <div class="btn-group" role="group" aria-label="Basic example">
+                    <div className="btn-group" role="group" aria-label="Basic example">
                         <a href="#">
-                            <button type="button" class="Gen0 btn btn-primary">Ingresar</button>
+                            <button type="submit" className="Gen0 btn btn-primary">Ingresar</button>
                         </a>
                     </div>
                 </form>
