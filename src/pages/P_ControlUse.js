@@ -59,10 +59,37 @@ const UserControlPage = () => {
     return (
         <div id="EnvGlob">            
             <div>
+                <div class="row row-cols-1 row-cols-md-2">
+                    <div class="col mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Añadir Productor</h5>
+                                <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter email"></input>
+                                <br/>
+                                <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email"></input>
+                            </div>
+                            <div class="card-footer bg-transparent">
+                                <button type="button" class="btn btn-secondary">Agregar</button>
+                                                               
+                                <button type="button" class="btn btn-secondary">Limpiar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Actualizar Productor</h5>
+                            </div>
+                            <div class="card-footer bg-transparent">
+                                <button type="button" class="btn btn-secondary">Actualizar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div>
-                <table class="table" id="">
-                    <thead class="thead-dark">
+                <table class="table">
+                    <thead class="thead-dark"> 
                         <tr>
                             <th scope="col">ID</th>
                             <th scope="col">Nombre</th>
