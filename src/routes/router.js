@@ -7,6 +7,7 @@ import NavOverLay from '../Layout/Overlay'
 
 import MainPage from '../pages/P_Main'
 import LoginPage from '../pages/P_Login'
+import UserControlPage from '../pages/P_ControlUse'
 
 //import Productores from '../pages/Productores'
 //import Transportistas from '../pages/Transportistas'
@@ -27,9 +28,9 @@ const Router = () => {
             </Route>
             <Route element={<NavOverLay />}>
                <Route path='/inicio' element={<MainPage/>}/>
-               <Route path='/UserControl' element={<LoginPage/>}/>
-               <Route path='/info' element={<LoginPage/>}/>
-               <Route path='/contact' element={<LoginPage/>}/>
+               <Route path='/UserControl' element={<UserControlPage/>}/>
+               <Route path='/info' element={<MainPage/>}/>
+               <Route path='/contact' element={<MainPage/>}/>
             </Route>
         </Routes>
     </BrowserRouter>

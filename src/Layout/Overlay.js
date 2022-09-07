@@ -20,7 +20,7 @@ const NavOverLay = () => {
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item">Panel Principal</a>
                             <NavLink to='/UserControl' className={'dropdown-item'}>User Control</NavLink>
-                            <NavLink to='/inicio' className={'dropdown-item'}>Blank</NavLink>
+                            <NavLink to='/inicio' className={'dropdown-item'}>BlankExample</NavLink>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item">Cerrar Sesion</a>                            
                             </div>
