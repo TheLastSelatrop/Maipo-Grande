@@ -2,15 +2,7 @@ body{
     background-color:#f4f4f4;
     font-family: HiraginoSans-W3,Hiragino Kaku Gothic Pro,メイリオ,Meiryo,Verdana,sans-serif;
 }
-div.col-sm {
-    background-color: cornflowerblue;
-    border: 1px solid #000;
-}
 
-div.col {
-    background-color: rgb(100, 237, 123);
-    border: 1px solid #000;
-}
 #b-lila div {
     background-color: blueviolet;
     border: 1px solid #000;

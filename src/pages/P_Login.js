@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { login } from "../helpers/getAdmin";
 
@@ -22,13 +22,12 @@ const LoginPage = () => {
         })
     }
 
-
     const onSubmit = async(e) =>{
         e.preventDefault();
        
         const respuesta = await login(formValues);
         if(respuesta.msg){
-            navigate('/')
+            navigate('/inicio')
         }
     }
     return ( 
@@ -36,7 +35,6 @@ const LoginPage = () => {
         <div className="carrusel container-fluid">
             <div id="carouselExampleFade" className="carousel slide mt-5 w-75" data-interval="5000" data-ride="carousel">
                 <div className="carousel-inner">
-
                     <div className="carrusel carousel-item active">
                     <img src={FondoLog} className="wallpaper d-block w-100" alt="." id="imagen"/>
                 </div>
@@ -45,7 +43,7 @@ const LoginPage = () => {
             </div>
         </div>
         
-        <div className="login-form card" id="LoginCardBox">
+        <div className="login-form card" id="LoginCardBox" onSubmit={onSubmit}>
             
             <svg className="bd-placeholder-img" id="HeadLoginCard">
                 <rect width="100%" height="100%" fill="#1e40ae"></rect>
@@ -63,7 +61,7 @@ const LoginPage = () => {
                     </div>
 
                     <div className="btn-group" role="group" aria-label="Basic example">
-                        <a href="#">
+                        <a>
                             <button type="submit" className="Gen0 btn btn-primary">Ingresar</button>
                         </a>
                     </div>
